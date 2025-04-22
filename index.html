@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Drip Store</title>
+    <link rel="shortcut icon" href="./assets/icons/digital-icon.svg" type="image/x-icon">
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <header>
+        <div class="flex gap-30 justify-evenly px-[108px] py-8">
+            <div class="flex gap-1">
+                <img src="./assets/icons/digital-icon.svg" alt="Logo digital store">
+                <h1 class="text-4xl text-(--color-primary) font-semibold w-[253px]">Digital Store</h1>
+            </div>
+            <div>
+                <input type="text" placeholder="Pesquisar produto..." class="bg-(--color-light-gray3) py-2 px-3 rounded-lg bg-[url(/assets/icons/search-icon.svg)] bg-no-repeat bg-right focus:placeholder-transparent focus:outline-none w-[559px] h-[60px]">
+            </div>
+            <div>
+                <a href="#" class="bg-(--color-primary) text-(--color-white) text-bold h-10">Entrar</a>
+            </div>
+            <div class="relative flex">
+                <img src="./assets/icons/cart-icon.svg" alt="">
+                <div class="absolute bottom-8 left-3 bg-(--color-tertiary) text-(--color-white) font-bold rounded-full h-4 w-4 text-center text-xs">
+                    2
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="flex gap-7 ml-65 mt-5">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>Produtos</li></a>
+                <a href="#"><li>Categorias</li></a>
+                <a href="#"><li>Meus pedidos</li></a>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
