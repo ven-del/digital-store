@@ -3,39 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Store</title>
+    <link href="./css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Drip Store</title>
-    <link rel="shortcut icon" href="./assets/icons/digital-icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/icons/digital-icon.svg" type="image/x-icon">
 </head>
 <body>
-    <header class="flex items-center flex-col">
-        <div class="flex gap-25 items-center px-[108px] py-8">
-            <div class="flex gap-1">
-                <img src="./assets/icons/digital-icon.svg" alt="Logo digital store">
-                <h1 class="text-4xl text-(--color-primary) font-semibold w-[253px]">Digital Store</h1>
-            </div>
-            <div>
-                <input type="text" placeholder="Pesquisar produto..." class="bg-(--color-light-gray3) py-2 px-3 rounded-lg bg-[url(/assets/icons/search-icon.svg)] bg-no-repeat bg-right focus:placeholder-transparent focus:outline-none w-[559px] h-[60px]">
-            </div>
-            <div>
-                <a href="#" class="bg-(--color-primary) text-(--color-white) text-bold px-7 py-2 rounded-lg">Entrar</a>
-            </div>
-            <div class="relative">
-                <img src="/assets/icons/cart-icon.svg" alt="Imagem de um carrinho de compras">
-                <div class="absolute bottom-4 left-4 bg-(--color-tertiary) text-(--color-white) font-bold rounded-full h-4 w-4 text-center text-xs">
-                    2
-                </div>
+<header class="flex flex-col gap-12 px-[108px] py-[38px]">
+    <div class="flex items-center justify-between">
+        <div class="flex gap-1">
+            <img src="/assets/icons/digital-icon.svg" alt="Logo da Digital Store">
+            <h1 class="text-4xl text-(--color-primary) font-semibold">Digital Store</h1>
+        </div>
+        <input type="text" placeholder="Pesquisar produto..." class="bg-(--color-light-gray3) py-2 px-3 rounded-lg ml-40 mr-14 bg-[url(/assets/icons/search-icon.svg)] bg-no-repeat bg-right focus:placeholder-transparent focus:outline-none w-[560px]" />
+        <div>
+            <a href="#" class="bg-(--color-primary) text-white rounded-lg px-7 py-3 font-bold text-sm">
+                Entrar
+            </a>
+        </div>
+        <div class="relative">
+            <img src="/assets/icons/cart-icon.svg" alt="Imagem de um carrinho de compras">
+            <div class="flex justify-center items-center absolute bg-(--color-tertiary) text-white font-bold text-xs rounded-full w-[18px] h-[18px] bottom-[15px] left-3">
+                2
             </div>
         </div>
-        <nav>
-            <ul class="flex gap-7 pr-170 mt-5">
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>Produtos</li></a>
-                <a href="#"><li>Categorias</li></a>
-                <a href="#"><li>Meus pedidos</li></a>
+    </div>
+    </div>
+    <nav class="pl-32">
+        <ul class="flex gap-6 text-(--color-dark-gray2)">
+            <li class="hover:text-(--color-primary) hover:font-bold">
+                <a href="#">
+                Home
+            </a>
+        </li>
+            <li class="hover:text-(--color-primary) hover:font-bold">
+                <a href="#">
+                Produtos
+            </a>
+        </li>
+            <li class="hover:text-(--color-primary) hover:font-bold">
+                <a href="#">
+                Categorias
+            </a>
+        </li>
+            <li class="hover:text-(--color-primary) hover:font-bold">
+                <a href="#">
+                Meus Pedidos
+            </a>
+        </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="flex px-[108px] bg-(--color-light-gray3) py-[78px] h-[680px] relative">
+        <div class="flex flex-col gap-5 w-[466px]">
+            <p class="text-(--color-warning) font-bold">
+                Melhores ofertas personalizadas
+            </p>
+            <h2 class="font-extrabold text-6xl">
+                Queima de estoque Nike 🔥
+            </h2>
+            <p class="text-(--color-dark-gray2) text-lg">
+                Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.
+            </p>
+            <a href="#" class="flex items-center justify-center bg-(--color-primary) text-(--color-light-gray3) font-bold w-[220px] h-[48px] rounded-lg">
+                Ver Ofertas
+            </a>
+        </div>
+        <img src="/assets/images/sneakers.svg" alt="Foto de um tênis branco" class="absolute right-28 bottom-8"/>
+        <img src="/assets/images/ornament.svg" alt="Firula do site - by wendell" class="absolute top-12 right-8">
+    </section>
+    
+    <section>
+        <div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li></li>
+                <li></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+
+        <div>
+
+        </div>
+    </section>
+</main>
 </body>
 </html>
