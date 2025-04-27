@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Store</title>
     <link href="./css/style.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="/assets/icons/digital-icon.svg" type="image/x-icon">
 </head>
-<body>
-<header class="flex flex-col gap-12 px-[108px] py-[38px]">
-    <div class="flex items-center justify-between">
+<body class="max-sm:overflow-hidden w-full">
+<header class="flex flex-col gap-12 px-[108px] py-[38px] max-sm:flex-row max-sm:p-5">
+    <div class="flex items-center justify-between max-sm:w-full">
+        <div>
+            <img src="/assets/icons/menu-hamburguer.svg" alt="foto de um menu hamburguer" class="hidden max-sm:block">
+        </div>
         <div class="flex gap-1">
             <img src="/assets/icons/digital-icon.svg" alt="Logo da Digital Store">
-            <h1 class="text-4xl text-(--color-primary) font-semibold">Digital Store</h1>
+            <h1 class="text-4xl text-(--color-primary) font-semibold max-sm:text-xl">Digital Store</h1>
         </div>
-        <input type="text" placeholder="Pesquisar produto..." class="bg-(--color-light-gray3) py-2 px-3 rounded-lg ml-40 mr-14 bg-[url(/assets/icons/search-icon.svg)] bg-no-repeat bg-right focus:placeholder-transparent focus:outline-none w-[560px]" />
-        <div>
+        <input type="text" placeholder="Pesquisar produto..." class="bg-(--color-light-gray2) py-2 px-3 rounded-lg ml-40 mr-14 bg-[url(/assets/icons/search-icon.svg)] bg-no-repeat bg-right focus:placeholder-transparent w-[560px] max-sm:hidden" />
+        <div class="max-sm:hidden">
             <a href="#" class="bg-(--color-primary) text-white rounded-lg px-7 py-3 font-bold text-sm">
                 Entrar
             </a>
         </div>
+        <img src="/assets/icons/search-icon.svg" alt="Imagem de lupa" class="hidden absolute right-14 max-sm:block">
         <div class="relative">
-            <img src="/assets/icons/cart-icon.svg" alt="Imagem de um carrinho de compras">
+            <img src="/assets/icons/cart-icon.svg" alt="Imagem de um carrinho de compras" class="max-sm:fill-(--color-primary)">
             <div class="flex justify-center items-center absolute bg-(--color-tertiary) text-white font-bold text-xs rounded-full w-[18px] h-[18px] bottom-[15px] left-3">
                 2
             </div>
         </div>
     </div>
     </div>
-    <nav class="pl-32">
+    <nav class="pl-32 max-sm:hidden">
         <ul class="flex gap-6 text-(--color-dark-gray2)">
             <li class="hover:text-(--color-primary) hover:font-bold">
                 <a href="#">
@@ -54,10 +57,10 @@
         </ul>
     </nav>
 </header>
-<main>
-    <section class="flex px-[108px] bg-(--color-light-gray3) py-[78px] h-[680px] relative">
-        <div class="flex flex-col gap-5 w-[466px]">
-            <p class="text-(--color-warning) font-bold">
+<main class="bg-[#F9F8FE]">
+    <section class="flex px-[108px] bg-(--color-light-gray2) py-[78px] h-[680px] relative max-sm:p-0">
+        <div class="flex flex-col gap-5 w-[466px] max-sm:justify-end max-sm:items-center">
+            <p class="text-(--warning-color) font-bold">
                 Melhores ofertas personalizadas
             </p>
             <h2 class="font-extrabold text-6xl">
@@ -66,29 +69,329 @@
             <p class="text-(--color-dark-gray2) text-lg">
                 Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.
             </p>
-            <a href="#" class="flex items-center justify-center bg-(--color-primary) text-(--color-light-gray3) font-bold w-[220px] h-[48px] rounded-lg">
+            <a href="#" class="flex items-center justify-center bg-(--color-primary) text-(--color-light-gray2) font-bold w-[220px] h-[48px] rounded-lg">
                 Ver Ofertas
             </a>
         </div>
-        <img src="/assets/images/sneakers.svg" alt="Foto de um tênis branco" class="absolute right-28 bottom-8"/>
-        <img src="/assets/images/ornament.svg" alt="Firula do site - by wendell" class="absolute top-12 right-8">
+        <img src="/assets/images/white-sneakers.svg" alt="Foto de um tenis branco" class="absolute right-28 bottom-8 max-sm:bottom-0 max-sm:right-6.5 max-sm:top-2"/>
+        <img src="/assets/images/ornament.svg" alt="Firula do site - by wendell" class="absolute top-12 right-8 max-sm:top-4 max-sm:left-[80%]">
     </section>
-    
-    <section>
-        <div>
-            <ul>
-                <li>
-                    
+    <section class="flex flex-col gap-15 px-[108px] py-[42px]">
+        <div class="flex flex-col gap-10">
+            <h4 class="text-(--color-dark-gray2) font-bold text-2xl">
+                Coleções em destaque
+            </h4>
+            <ul class="grid grid-cols-3 gap-3.5 h-68">
+                <li  class="flex bg-[#D8E3F2] pl-8 pt-8 rounded-md relative bg-[url(/assets/images/star-wars-shirt-pic.svg)] bg-no-repeat bg-bottom-right">
+                    <div class="w-1/2 z-10">
+                    <p class="bg-[#E7FF86] rounded-4xl font-bold text-(--color-dark-gray2) w-[96px] text-center py-1.5 text-sm">
+                        30% OFF
+                    </p>
+                    <h5 class="font-bold text-(--color-dark-gray1) text-4xl mt-2.5 mb-8">
+                        Novo drop Supreme
+                    </h5>
+                    <a href="#" class="text-(--color-primary) bg-white rounded-xl font-bold px-12 py-4.5">
+                        Comprar
+                    </a>
+                </div>
                 </li>
-                <li></li>
-                <li></li>
+                <li  class="flex bg-[#D8E3F2] pl-8 pt-8 rounded-md relative bg-[url(/assets/images/sneaks-pic.svg)] bg-no-repeat bg-bottom-right">
+                    <div class="w-1/2 z-10">
+                    <p class="bg-[#E7FF86] rounded-4xl font-bold text-(--color-dark-gray2) w-[96px] text-center py-1.5 text-sm">
+                        30% OFF
+                    </p>
+                    <h5 class="font-bold text-(--color-dark-gray1) text-4xl mt-2.5 mb-8">
+                        Coleção Adidas
+                    </h5>
+                    <a href="#" class="text-(--color-primary) bg-white rounded-xl font-bold px-12 py-4.5">
+                        Comprar
+                    </a>
+                </div>
+                </li>
+                <li  class="flex bg-[#D8E3F2] pl-8 pt-8 rounded-md relative bg-[url(/assets/images/headphone-pic.svg)] bg-no-repeat bg-bottom-right">
+                    <div class="w-1/2 z-10">
+                    <p class="bg-[#E7FF86] rounded-4xl font-bold text-(--color-dark-gray2) w-[96px] text-center py-1.5 text-sm">
+                        30% OFF
+                    </p>
+                    <h5 class="font-bold text-(--color-dark-gray1) text-4xl mt-2.5 mb-8">
+                        Novo<br> Beats Bass
+                    </h5>
+                    <a href="#" class="text-(--color-primary) bg-white rounded-xl font-bold px-12 py-4.5">
+                        Comprar
+                    </a>
+                </div>
+                </li>
             </ul>
         </div>
-
+        <div class="bg-[url(/assets/images/house-border.svg)] bg-no-repeat bg-center object-contain flex flex-col items-center gap-5 pt-5.5 h-[318px]">
+            <h1 class="font-bold text-2xl text-(--color-dark-gray2)">
+                Coleções em destaque
+            </h1>
+            <ul class="flex gap-8">
+                <li><a href="#">
+                    <div class="bg-[url(/assets/icons/t-shirt.svg)] w-[104px] h-[104px] bg-white bg-no-repeat bg-center rounded-full"></div>
+                    <p class="font-bold text-sm text-(--color-dark-gray2) text-center">Camisetas</p>
+                </a></li>
+                <li><a href="#">
+                    <div class="bg-[url(/assets/icons/pants.svg)] w-[104px] h-[104px] bg-white bg-no-repeat bg-center rounded-full"></div>
+                    <p class="font-bold text-sm text-(--color-dark-gray2) text-center">Calças</p>
+                </a></li>
+                <li><a href="#">
+                    <div class="bg-[url(/assets/icons/cap.svg)] w-[104px] h-[104px] bg-white bg-no-repeat bg-center rounded-full"></div>
+                    <p class="font-bold text-sm text-(--color-dark-gray2) text-center">Bonés</p>
+                </a></li>
+                <li><a href="#">
+                    <div class="bg-[url(/assets/icons/headphones.svg)] w-[104px] h-[104px] bg-white bg-no-repeat bg-center rounded-full"></div>
+                    <p class="font-bold text-sm text-(--color-dark-gray2) text-center">Headphones</p>
+                </a></li>
+                <li><a href="#">
+                    <div class="bg-[url(/assets/icons/sneakers.svg)] w-[104px] h-[104px] bg-white bg-no-repeat bg-center rounded-full"></div>
+                    <p class="font-bold text-sm text-(--color-dark-gray2) text-center">Tênis</p>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="px-[108px]">
+        <div class="flex justify-between mb-5">
+            <h4 class="text-(--color-dark-gray2) font-bold text-2xl">
+                Produtos em  alta
+            </h4>
+            <div>
+                <a href="#" class="text-(--color-primary) text-[18px]">
+                    Ver todos
+                    <img src="/assets/icons/arrow-right.svg" alt="Flecha apontando pra direita" class="w-[24px]">
+                </a>
+                
+            </div>
+        </div>
+        <ul class="grid grid-cols-4">
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+                <div class="flex justify-center items-center bg-[#E7FF86] font-bold text-sm h-[32px] w-[96px] rounded-4xl absolute left-5 top-5">50% off</div>
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <div class="flex gap-2">
+                    <h5 class="text-(--color-light-gray1) line-through text-2xl">
+                        $200
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+                </div>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+                <div class="flex justify-center items-center bg-[#E7FF86] font-bold text-sm h-[32px] w-[96px] rounded-4xl absolute left-5 top-5">50% off</div>
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <div class="flex gap-2">
+                    <h5 class="text-(--color-light-gray1) line-through text-2xl">
+                        $200
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+                </div>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+            </div>
+            </li>
+            <li class="mb-5">
+            <div class="bg-[url(/assets/images/sneaks-pic2.svg)] w-[292px] h-[320px] bg-white bg-no-repeat bg-center relative">
+            </div>
+                <div>
+                    <p class="text-xs text-(--color-light-gray1) font-bold">
+                        Tênis
+                    </p>
+                    <h5 class="text-2xl text-(--color-dark-gray2)">
+                        K-Swiss V8 - Masculino
+                    </h5>
+                    <h5 class="font-bold text-2xl">
+                        $100
+                    </h5>
+            </div>
+            </li>
+           
+        </ul>
+    </section>
+    <section class="flex justify-center items-center bg-white py-20 px-18 gap-28">
         <div>
-
+            <div class="w-[456px] h-[456px] bg-linear-(--color-secondary-gradient) rounded-full  relative">
+                <img src="/assets/images/ei-jordao.svg" alt="" class="w-[574px] absolute top-[12%] right-[12%] scale-135">
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 w-[40%]">
+            <p class="text-sm text-(--color-primary) font-bold">
+                Oferta especial
+            </p>
+            <h2 class="font-bold text-(--color-dark-gray2) text-5xl">
+                Air Jordan edição de colecionador
+            </h2>
+            <p class="text-(--color-dark-gray2)">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            </p>
+            <a href="#" class="flex items-center justify-center bg-(--color-primary) text-(--color-light-gray2) font-bold w-[220px] h-[48px] rounded-lg mt-6">
+                Ver Ofertas
+            </a>
         </div>
     </section>
 </main>
+<footer class="bg-black text-white pt-20 pb-4 px-28 flex flex-col">
+    <div class="flex gap-32">
+        <div  class="flex flex-col gap-10">
+            <div class="flex gap-2">
+                <img src="/assets/icons/white-logo.svg" alt="Logo da Digital em branco">
+                <h4 class="font-semibold text-4xl">Digital Store</h4>
+            </div>
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, repellendus. Est reprehenderit, placeat neque omnis fuga esse nobis voluptas vel assumenda saepe suscipit adipisci minima sapiente beatae consequatur sequi magni.</p>
+        </div>
+        <div>
+            <ul class="flex gap-6">
+                <li><img src="/assets/icons/facebook.svg" alt="logo da facebook"></li>
+                <li><img src="/assets/icons/instagram.svg" alt="logo do instagram"></li>
+                <li><img src="/assets/icons/twitter.svg" alt="logo da twitter, vulgo, X"></li>
+            </ul>
+        </div>
+    </div>
+        <div class="flex gap-10">
+            <ul class="flex flex-col gap-4 list-none">
+                <li class="font-semibold text-xl mb-2.5">Informação</li>
+                <li><a href="#">
+                    Sobre Drip Store
+                </a></li>
+                <li><a href="#">
+                    Segurança
+                </a></li>
+                <li><a href="#">
+                    Wishlist
+                </a></li>
+                <li><a href="#">
+                    Blog
+                </a></li>
+                <li><a href="#">
+                    Trabalhe conosco
+                </a></li>
+                <li><a href="#">
+                    Meus Pedidos
+                </a></li>
+            </ul>
+            <ul class="flex flex-col gap-4 list-none">
+                <li class="font-semibold text-xl mb-2.5">Categorias</li>
+                <li><a href="#">
+                    Camisetas
+                </a></li>
+                <li><a href="#">
+                    Calças
+                </a></li>
+                <li><a href="#">
+                    Bonés
+                </a></li>
+                <li><a href="#">
+                    Headphones
+                </a></li>
+                <li><a href="#">
+                    Tênis
+                </a></li>
+            </ul>
+        </div>
+        <div class="flex flex-col gap-5">
+            <h6 class="font-semibold text-xl mb-4">Contato</h6>
+            <p>Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
+            <p>(85) 3051-3411</p>
+        </div>
+    </div>
+    <hr class="opacity-30 mt-15 mb-5">
+    <div class="text-center">
+        <p class="text-sm">@ 2022 Digital College</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
 </html>
